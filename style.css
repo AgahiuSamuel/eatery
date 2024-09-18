@@ -1,0 +1,316 @@
+.menu-toggle {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  font-family: sans-serif 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  background-color: rgb(255, 247, 246);
+  max-width: 800px;
+  width: 100%;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: rgb(255, 90, 72);
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-links li a {
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.menu-links li a::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  background-color: #000;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(0);
+}
+
+.menu-links li a:hover::before {
+  transform: scaleX(1);
+}
+
+.menu-bar button {
+  height: 23px;
+  width: 80px;
+  border: 1px solid rgb(255, 90, 72);
+  border-radius: 10px;
+  background-color: transparent;
+  color: rgb(255, 90, 72);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.menu-bar button:hover {
+  border: none;
+  background-color: rgb(255, 90, 72);
+  color: #fff;
+  box-shadow: 0 2px 3px rgb(70, 25, 20);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #000;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.maths .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.first h1 {
+  font-size: 55px;
+}
+
+.first span {
+  color: rgb(255, 90, 72);
+}
+
+.first p {
+  font-size: 12px;
+  padding: 12px 0;
+}
+
+.first1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.first1 button {
+  height: 23px;
+  width: 100px;
+  border: 1px solid rgb(255, 90, 72);
+  border-radius: 10px;
+  background-color: transparent;
+  color: rgb(255, 90, 72);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin: 10px 0;
+}
+
+.first1 button:hover {
+  border: none;
+  box-shadow: 0 2px 3px rgb(70, 25, 20);
+  background-color: rgb(255, 90, 72);
+  color: #fff;
+}
+
+.maths img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgb(255, 90, 72);
+}
+
+.second {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 5px; */
+  padding: 15px 0;
+}
+
+.second1 {
+  border-radius: 13px;
+  width: 150px;
+  background-color: #fff;
+  padding: 4px 10px;
+}
+
+.second1 img {
+  height: 100px;
+  width: 100px;
+  margin: 0 15px;
+}
+
+.second1 p {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.second1 span {
+  font-size: 13px;
+  color: rgb(255, 90, 72);
+}
+
+.second2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second3 {
+  background-color: rgb(255, 246, 245);
+  border-radius: 10px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.second3 div {
+  font-size: small;
+}
+
+.second4 {
+  background-color: rgb(255, 90, 72);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+@media(max-width:600px) {
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+   right: 50px;
+    background-color: rgb(255, 48, 25);
+    width: 100px;
+    padding: 5px 0;
+  }
+
+  .menu-links.active {
+    display: flex;
+    margin-top: 3em;
+  }
+
+  .menu-links li a {
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-toggle:active .menu-links {
+    display: flex;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg)translate(5px, 5px)
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg)translate(5px, -5px)
+  }
+
+  main {
+    max-width: 500px;
+  }
+
+  .menu-bar {
+    display: flex;
+    gap: 20px;
+  }
+
+  .first h1 {
+    font-size: 28px;
+  }
+
+  .first p {
+    font-size: 9px;
+  }
+
+  .maths img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .first1 button {
+    font-size: 11px;
+    width: 85px;
+    height: 21px;
+  }
+
+  .english h3 {
+    font-size: 14px;
+  }
+
+  .second1 img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .second1 {
+    width: 111px;
+  }
+  .second4{
+    height: 15px;
+    width: 15px;
+    font-size: 10px;
+  }
+}

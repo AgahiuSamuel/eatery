@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eatery</title>
+  <link rel="icon" type="x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div>
+        <a href="" class="logo">Foodi</a>
+      </div>
+      <nav class="menu-bar">
+        <ul class="menu-links">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <button>Login</button>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <section class="maths">
+      <div class="container">
+        <div class="first">
+          <h1>Tasty Food <br> <span>Collections</span></h1>
+          <p>To provide nutritional support for and organism and alll living things<br> Food is usually of plant, animal or fungal origin...
+          </p>
+          <div class="first1">
+            <button>Order Now</button>
+            <button>Download Now</button>
+          </div>
+        </div>
+        <div>
+          <img src="first.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="english">
+      <div class="container">
+        <h3>Popular Dishes</h3>
+        <div class="second">
+          <div class="second1">
+            <img src="Cheese.png" alt="">
+            <p>Mac & Cheese <br><span>$17.00</span></p>
+            <div class="second2">
+              <div class="second3">
+                <div><i class='bx bxs-star' style='color:#ff9a00'></i></div>
+                <p>4.8</p>
+              </div>
+              <div class="second4"><i class='bx bxs-bell-ring bx-tada'></i></div>
+            </div>
+          </div>
+          <div class="second1">
+            <img src="burger.png" alt="">
+            <p>Cheese Burger <br><span>$24.00</span></p>
+            <div class="second2">
+              <div class="second3">
+                <div><i class='bx bxs-star' style='color:#ff9a00'></i></div>
+                <p>4.8</p>
+              </div>
+              <div class="second4"><i class='bx bxs-bell-ring bx-tada'></i></div>
+            </div>
+          </div>
+          <div class="second1">
+            <img src="turkish.png" alt="">
+            <p>Cheese Burger <br><span>$27.00</span></p>
+            <div class="second2">
+              <div class="second3">
+                <div><i class='bx bxs-star' style='color:#ff9a00'></i></div>
+                <p>4.8</p>
+              </div>
+              <div class="second4"><i class='bx bxs-bell-ring bx-tada'></i></div>
+            </div>
+          </div>
+          <div class="second1">
+            <img src="donuts.png" alt="">
+            <p>Cheese Burger <br><span>$20.00</span></p>
+            <div class="second2">
+              <div class="second3">
+                <div><i class='bx bxs-star' style='color:#ff9a00'></i></div>
+                <p>4.8</p>
+              </div>
+              <div class="second4"><i class='bx bxs-bell-ring bx-tada'></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      this.classList.toggle("active");
+      document.querySelector(".menu-links").classList.toggle("active")  
+    });
+  </script>
+</body>
+
+</html>
